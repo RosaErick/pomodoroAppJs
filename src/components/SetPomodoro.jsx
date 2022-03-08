@@ -1,8 +1,11 @@
-import React from 'react'
+import  {React, useContext } from 'react'
 import Button from './Button'
 import { useState } from 'react'
+import { SettingContext } from '../context/SettingsContext'
 
 const SetPomodoro = () => {
+    const { updateExecute } = useContext(SettingContext);
+
     const [newTimer, setNewTimer] = useState({
         work: 0.3,
         short: 0.2,
@@ -13,6 +16,8 @@ const SetPomodoro = () => {
     });
 
     const handleChange = input => {
+
+
         const { name, value } = input.target
 
         console.log(name)       
