@@ -54,18 +54,28 @@ const SetPomodoro = () => {
     <div className="form-container">
       <form noValidate>
         <div className="inputwrapper">
+          <label htmlFor="work">Work</label>
           <input
             className="input"
             name="work"
             onChange={handleChange}
             value={newTimer.work}
           />
+        </div>
+
+        <div className="inputwrapper">  
+          <label htmlFor="shortBreak">Short Break</label>
           <input
             className="input"
             name="shortBreak"
             onChange={handleChange}
             value={newTimer.short}
           />
+        </div>
+
+        
+        <div className="inputwrapper">
+          <label htmlFor="longBreak">Long Break</label>
           <input
             className="input"
             name="longBreak"
