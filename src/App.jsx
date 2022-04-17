@@ -20,13 +20,15 @@ function App() {
   useEffect(() => updateExecute(executing), [executing, startAnimate]);
 
   return (
-    <div className="container">
-      <h1>Pomodoro App</h1>
+   <div className="container">
+     <h1>Pomodoro App</h1>
       <small>simple and fast</small>
       {pomodoro == 0 ? (
         <SetPomodoro />
       ) : (
-        <>
+          <>
+            
+          <div className="card">
           <ul className="labels">
             <li>
               <Button
@@ -77,7 +79,8 @@ function App() {
               clasName={startAnimate ? "active" : undefined}
               callback={pauseTimer}
             />
-          </div>
+              </div>
+      </div>
         </>
       )}
     </div>
